@@ -9,3 +9,7 @@ logs/
 *.wav
 
 clips/
+
+vocabulary.txt
+vocabulary.auto.txt
+contacts.txt
