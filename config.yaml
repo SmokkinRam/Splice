@@ -1,0 +1,16 @@
+# Words the speech model often mishears -> what you meant (single words only).
+# Add to this list whenever the assistant mishears you.
+aliases:
+  crows: chrome
+  throat: chrome
+  crome: chrome
+  dems: dbms
+  dimms: dbms
+  dbs: dbms  
+
+
+# Spoken app name -> the name as it appears in the Start menu.
+app_aliases:
+  browser: Google Chrome
+  vs code: Visual Studio Code 
+  Anti: Antigravity IDE

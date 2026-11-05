@@ -66,7 +66,7 @@ def _on_release(key):
     _ready.put(audio)
 
 
-def _start():
+def start():
     global _stream, _listener
     if _stream is not None:
         return
@@ -81,7 +81,7 @@ def _start():
 
 def listen_once():
     """Block until F9 is held and released; return the audio (float32, 16 kHz)."""
-    _start()
+    start()
     while True:
         try:
             audio = _ready.get(timeout=0.5)   # timeout so Ctrl+C works on Windows
