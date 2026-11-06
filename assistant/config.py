@@ -21,6 +21,8 @@ def load_config(path="config.yaml", reload=False):
         data["app_aliases"] = {str(k).lower(): str(v) for k, v in app_aliases.items()}
         data["folders"] = {str(k).lower(): str(v) for k, v in folders.items()}
         data["chrome_profiles"] = {str(k).lower(): str(v) for k, v in profiles.items()}
+        speech = data.get("speech") or {}
+        data["speech"] = {"enabled": True, "rate": 0, "voice": "", **speech}
         data["app_search_folders"] = [str(f) for f in (data.get("app_search_folders") or [])]
         data["screenshot_folder"] = data.get("screenshot_folder") or None
         _cache[path] = data

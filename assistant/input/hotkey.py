@@ -28,7 +28,7 @@ _held = False
 _preroll = collections.deque(maxlen=max(1, int(PREROLL_S * RATE / BLOCK)))
 _chunks = []
 _stream = None
-_listener = None
+PRESS_HOOKS = []   # functions called when F9 is pressed
 
 
 def _on_audio(indata, frames, time_info, status):
@@ -50,9 +50,10 @@ def _on_press(key):
         _chunks.clear()
         _chunks.extend(_preroll)
         _held = True
+    for hook in PRESS_HOOKS:      # e.g. stop the assistant talking when you start to speak
+        hook()
     print("Listening...")
-
-
+    
 def _on_release(key):
     global _held
     if key != HOTKEY:

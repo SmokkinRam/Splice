@@ -6,7 +6,8 @@ aliases:
   crome: chrome
   dems: dbms
   dimms: dbms
-  dbs: dbms  
+  dbs: dbms 
+  micron: my 
 
 
 # Spoken app name -> the name as it appears in the Start menu.
@@ -18,8 +19,8 @@ app_aliases:
 # Chrome profiles: spoken name -> the profile's folder, as shown by
 #   python -m assistant.tools.chrome
 chrome_profiles:
-  my: DEFULT
-  mom: Default1 
+  my: Profile 1
+  mom: Default
 # Your own spoken folder names -> real paths. "open splice" opens the folder.
 # Use forward slashes. Add your own, for example your college folders.
 folders:
@@ -31,3 +32,9 @@ screenshot_folder: C:/Users/ADMIN/Pictures/Screenshots
 # Extra places to look for apps that are NOT in the Start menu (portable apps, etc.).
 app_search_folders:
   - "C:/Program Files"
+
+# Speaking back. rate: -10 (slow) to 10 (fast). voice: leave "" for the Windows default.
+speech:
+  enabled: true
+  rate: 1
+  voice: ""
