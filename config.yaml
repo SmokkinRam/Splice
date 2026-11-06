@@ -14,3 +14,20 @@ app_aliases:
   browser: Google Chrome
   vs code: Visual Studio Code 
   Anti: Antigravity IDE
+
+# Chrome profiles: spoken name -> the profile's folder, as shown by
+#   python -m assistant.tools.chrome
+chrome_profiles:
+  my: DEFULT
+  mom: Default1 
+# Your own spoken folder names -> real paths. "open splice" opens the folder.
+# Use forward slashes. Add your own, for example your college folders.
+folders:
+  splice: D:/Splice/Splice
+  screenshots: C:/Users/ADMIN/Pictures/Screenshots
+
+# Where screenshots are saved.
+screenshot_folder: C:/Users/ADMIN/Pictures/Screenshots
+# Extra places to look for apps that are NOT in the Start menu (portable apps, etc.).
+app_search_folders:
+  - "C:/Program Files"
